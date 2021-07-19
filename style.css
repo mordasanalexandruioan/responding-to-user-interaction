@@ -37,6 +37,7 @@ h4 {
     margin-top: 50px;
     border-radius: .5em;
     background-color: rgb(251, 251, 251);
+    box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.561);
 }
 
 .inviteBox {
@@ -94,14 +95,14 @@ input[type="text"] {
     font-size: 2rem;
 }
 
-.invited {
+#invited {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto;
     grid-gap: 15px;
 }
 
-.invited .card {
+#invited .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -112,32 +113,32 @@ input[type="text"] {
     height: 125px;
 }
 
-.invited .card .conf label {
+#invited .card .conf label {
     font-size: 1rem;
     color: black;
 }
 
-.invited .card .conf {
+#invited .card .conf {
     display: block;
 }
 
-.invited .card li {
+#invited .card li {
     margin: 0;
 }
 
-.invited .card .edit,
-.invited .card .remove {
+#invited .card .edit,
+#invited .card .remove {
     padding: .4em;
     border: none;
     border-radius: .3em;
     color: white;
 }
 
-.invited .card .edit {
+#invited .card .edit {
     background-color: rgb(66, 170, 170);
     margin-right: 4px;
 }
 
-.invited .card .remove {
+#invited .card .remove {
     background-color: rgb(145, 218, 218);
 }

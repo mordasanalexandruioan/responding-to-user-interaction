@@ -1,7 +1,7 @@
 let userName = document.querySelector('.name');
 let submit = document.querySelector('.submit');
-let invited = document.querySelector('.invited');
-let invCard = document.querySelector('.card');
+let invited = document.getElementById('invited');
+let invCard = document.getElementsByClassName('card');
 
 
 function addButtons(li) {
@@ -30,6 +30,7 @@ function addCheck(li) {
 
     let inp = document.createElement('input');
     inp.type = "checkbox";
+    inp.id = "confirm";
     li.appendChild(inp);
 }
 
@@ -51,4 +52,34 @@ submit.addEventListener('click', () => {
     newCard.append(liConf);
     newCard.append(liButtons);
     invited.append(newCard);
+})
+
+invited.addEventListener('click', (e) => {
+    let obj = e.target;
+    let li = obj.parentNode;
+    let card = li.parentNode;
+    let inv = card.parentNode;
+
+
+    if (obj.tagName == "BUTTON") {
+        if (obj.className == 'remove') {
+            inv.removeChild(card);
+        }
+    }
+})
+
+let invitationsBox = document.querySelector('.inviteBox');
+invitationsBox.addEventListener('click', (e) => {
+    let obj = e.target;
+
+    let check = document.getElementById('checkInv');
+    let conf = document.getElementById('confirm');
+
+    check = obj.parentNode;
+
+    if (obj.tagName == "INPUT") {
+        if (obj.id == "checkInv") {
+
+        }
+    }
 })
